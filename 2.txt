@@ -1,0 +1,30 @@
+用户和用户组(etc)
+
+/etc/group存储当前系统中所有用户组信息
+/etc/gshadow存储当前系统中用户组的密码信息
+/etc/passwd存储当前系统中用户的信息
+/etc/shadow存储当前系统中用户的密码信息
+
+whoami显示登录的用户名
+id zhangsan显示用户相关的一些信息
+groups zhangsan显示zhangsan用户所在的所有组
+finger zhangsan显示用户详细资料
+
+groupadd stu添加用户组
+groupdel stu删除用户组
+groupmod -n student stu修改用户组stu名字为student
+groupmod -g 666 student修改用户组编号
+groupadd -g 888 teacher添加用户组并指定编号 
+groupadd -g student li添加用户并指定用户组
+
+useradd -d /home/woshiwangwu wangwu 创建用户并指定家目录
+usermod -c goodperson wangwu修改用户注释
+usermod -g student wangwu修改用户组
+userdel wangwu删除用户
+userdel -r wangwu2删除用户并级联删除对应的目录
+
+
+对文件来说最高权限是x
+对目录来说最高权限是w,只有读权限是没有意义.对目录有了写权限,里面可以做任何事情
+文件默认权限是能建立可执行文件,必须手工赋予执行权限
+	
